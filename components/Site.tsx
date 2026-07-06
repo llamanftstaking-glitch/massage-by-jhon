@@ -18,6 +18,8 @@ import {
   ArrowRightIcon,
 } from "./Icons";
 
+const BP = process.env.NEXT_PUBLIC_BASE_PATH || "";
+
 const SERVICES = [
   { key: "relax", Icon: WaveIcon },
   { key: "sport", Icon: DumbbellIcon },
@@ -132,7 +134,7 @@ function Hero({ T }: { T: (k: string) => string }) {
           <div className="animate-fade-up delay-200 relative">
             <div className="relative rounded-3xl overflow-hidden shadow-2xl shadow-forest-900/15 aspect-[4/5] max-w-md mx-auto">
               <Image
-                src="/images/massage-table-1.jpg"
+                src={`${BP}/images/massage-table-1.jpg`}
                 alt="Sesión de masaje profesional a domicilio con camilla"
                 fill
                 className="object-cover"
@@ -256,7 +258,7 @@ function HomeService({ T }: { T: (k: string) => string }) {
           <Reveal delay={150}>
             <div className="relative rounded-3xl overflow-hidden shadow-2xl aspect-[4/5] max-w-md mx-auto">
               <Image
-                src="/images/massage-table-2.jpg"
+                src={`${BP}/images/massage-table-2.jpg`}
                 alt="Masaje terapéutico a domicilio en camilla profesional"
                 fill
                 className="object-cover"
@@ -277,7 +279,7 @@ function About({ T }: { T: (k: string) => string }) {
         <div className="grid md:grid-cols-5 gap-10 items-center">
           <Reveal className="md:col-span-2">
             <div className="relative rounded-3xl overflow-hidden shadow-xl aspect-square max-w-sm mx-auto">
-              <Image src="/images/jhon-portrait.jpg" alt="Jhon Rivas Aiken" fill className="object-cover" />
+              <Image src={`${BP}/images/jhon-portrait.jpg`} alt="Jhon Rivas Aiken" fill className="object-cover" />
             </div>
           </Reveal>
           <Reveal delay={120} className="md:col-span-3">
