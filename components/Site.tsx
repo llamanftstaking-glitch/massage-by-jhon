@@ -16,6 +16,8 @@ import {
   PinIcon,
   CheckIcon,
   ArrowRightIcon,
+  RollerIcon,
+  ShieldCheckIcon,
 } from "./Icons";
 
 const BP = process.env.NEXT_PUBLIC_BASE_PATH || "";
@@ -25,6 +27,7 @@ const SERVICES = [
   { key: "sport", Icon: DumbbellIcon },
   { key: "thera", Icon: HandsIcon },
   { key: "reduc", Icon: SparkleIcon },
+  { key: "madero", Icon: RollerIcon },
   { key: "train", Icon: LeafIcon },
 ] as const;
 
@@ -38,6 +41,7 @@ export default function Site() {
       <Hero T={T} />
       <Services T={T} lang={lang} />
       <HomeService T={T} />
+      <Credentials T={T} />
       <About T={T} />
       <BookingWizard T={T} lang={lang} />
       <Footer T={T} />
@@ -56,6 +60,7 @@ function Nav({ lang, setLang, T }: { lang: Lang; setLang: (l: Lang) => void; T: 
         <nav className="hidden md:flex items-center gap-7 text-sm font-medium text-ink-600">
           <a href="#servicios" className="hover:text-forest-800 transition-colors">{T("nav.services")}</a>
           <a href="#domicilio" className="hover:text-forest-800 transition-colors">{T("nav.homeService")}</a>
+          <a href="#credenciales" className="hover:text-forest-800 transition-colors">{T("nav.credentials")}</a>
           <a href="#jhon" className="hover:text-forest-800 transition-colors">{T("nav.about")}</a>
         </nav>
         <div className="flex items-center gap-3">
@@ -134,8 +139,8 @@ function Hero({ T }: { T: (k: string) => string }) {
           <div className="animate-fade-up delay-200 relative">
             <div className="relative rounded-3xl overflow-hidden shadow-2xl shadow-forest-900/15 aspect-[4/5] max-w-md mx-auto">
               <Image
-                src={`${BP}/images/massage-table-1.jpg`}
-                alt="Sesión de masaje profesional a domicilio con camilla"
+                src={`${BP}/images/hero-table.jpg`}
+                alt="Camilla profesional de masaje lista para la sesión"
                 fill
                 className="object-cover"
                 priority
@@ -258,13 +263,63 @@ function HomeService({ T }: { T: (k: string) => string }) {
           <Reveal delay={150}>
             <div className="relative rounded-3xl overflow-hidden shadow-2xl aspect-[4/5] max-w-md mx-auto">
               <Image
-                src={`${BP}/images/massage-table-2.jpg`}
-                alt="Masaje terapéutico a domicilio en camilla profesional"
+                src={`${BP}/images/work-session.jpg`}
+                alt="Jhon dando un masaje terapéutico en camilla profesional"
                 fill
                 className="object-cover"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-forest-900/50 via-transparent to-transparent" />
             </div>
+          </Reveal>
+        </div>
+      </div>
+    </section>
+  );
+}
+
+function Credentials({ T }: { T: (k: string) => string }) {
+  const bullets = ["cred.b1", "cred.b2", "cred.b3", "cred.b4"];
+  return (
+    <section id="credenciales" className="py-16 sm:py-24 bg-sand-100">
+      <div className="max-w-6xl mx-auto px-4 sm:px-6">
+        <div className="grid lg:grid-cols-2 gap-12 items-center">
+          <Reveal>
+            <div className="relative max-w-md mx-auto">
+              <div className="rounded-3xl overflow-hidden shadow-2xl shadow-forest-900/15 border border-sand-200 bg-white">
+                <Image
+                  src={`${BP}/images/license.jpg`}
+                  alt="Licencia de Estética del Departamento de Estado de Nueva York de Jhon Rivas"
+                  width={1080}
+                  height={781}
+                  className="w-full h-auto object-cover"
+                />
+              </div>
+              <div className="absolute -bottom-6 -right-4 sm:-right-8 w-32 sm:w-40 rounded-2xl overflow-hidden shadow-xl border-4 border-white rotate-3">
+                <Image
+                  src={`${BP}/images/wood-tools.jpg`}
+                  alt="Herramientas profesionales de maderoterapia"
+                  width={400}
+                  height={400}
+                  className="w-full h-auto object-cover"
+                />
+              </div>
+              <p className="mt-12 pr-32 sm:pr-36 text-ink-600 text-sm italic">{T("cred.caption")}</p>
+            </div>
+          </Reveal>
+          <Reveal delay={150}>
+            <p className="text-clay-500 font-bold text-sm tracking-widest uppercase mb-3">{T("cred.kicker")}</p>
+            <h2 className="font-display text-3xl sm:text-4xl lg:text-5xl text-ink-900 mb-5">{T("cred.title")}</h2>
+            <p className="text-ink-600 text-lg leading-relaxed mb-8">{T("cred.p1")}</p>
+            <ul className="space-y-4">
+              {bullets.map((b) => (
+                <li key={b} className="flex items-start gap-3">
+                  <span className="shrink-0 mt-0.5 w-7 h-7 rounded-full bg-forest-800/10 text-forest-800 flex items-center justify-center">
+                    <ShieldCheckIcon className="w-4 h-4" />
+                  </span>
+                  <span className="text-ink-900 font-medium">{T(b)}</span>
+                </li>
+              ))}
+            </ul>
           </Reveal>
         </div>
       </div>
@@ -279,7 +334,7 @@ function About({ T }: { T: (k: string) => string }) {
         <div className="grid md:grid-cols-5 gap-10 items-center">
           <Reveal className="md:col-span-2">
             <div className="relative rounded-3xl overflow-hidden shadow-xl aspect-square max-w-sm mx-auto">
-              <Image src={`${BP}/images/jhon-portrait.jpg`} alt="Jhon Rivas Aiken" fill className="object-cover" />
+              <Image src={`${BP}/images/face-massage.jpg`} alt="Jhon Rivas Aiken dando un masaje facial" fill className="object-cover" />
             </div>
           </Reveal>
           <Reveal delay={120} className="md:col-span-3">
@@ -551,7 +606,11 @@ function Footer({ T }: { T: (k: string) => string }) {
             </div>
           </div>
         </div>
-        <div className="border-t border-white/10 pt-6 text-sm">
+        <div className="border-t border-white/10 pt-6 text-sm space-y-1.5">
+          <p className="flex items-center gap-2">
+            <ShieldCheckIcon className="w-4 h-4 shrink-0" />
+            {T("footer.license")}
+          </p>
           <p>
             © {new Date().getFullYear()} Massage by Jhon. {T("footer.rights")}
           </p>

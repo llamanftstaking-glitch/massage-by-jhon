@@ -78,6 +78,22 @@ export function CheckIcon({ className = "w-5 h-5" }: { className?: string }) {
   );
 }
 
+export function RollerIcon({ className = "w-6 h-6" }: { className?: string }) {
+  return (
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" className={className} aria-hidden="true">
+      <path strokeLinecap="round" strokeLinejoin="round" d="M4 4l3 3m13 13l-3-3M7 7l10 10M7 7c1.2-1.2 3.1-1.2 4.3 0l5.7 5.7c1.2 1.2 1.2 3.1 0 4.3-1.2 1.2-3.1 1.2-4.3 0L7 11.3C5.8 10.1 5.8 8.2 7 7zM9.5 9.5l5 5m-2.75-7.25l5 5" />
+    </svg>
+  );
+}
+
+export function ShieldCheckIcon({ className = "w-6 h-6" }: { className?: string }) {
+  return (
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" className={className} aria-hidden="true">
+      <path strokeLinecap="round" strokeLinejoin="round" d="M12 3l7.5 3v5.25c0 4.5-3 8.25-7.5 9.75-4.5-1.5-7.5-5.25-7.5-9.75V6L12 3zm-3 9l2.25 2.25L15.5 10" />
+    </svg>
+  );
+}
+
 export function ArrowRightIcon({ className = "w-5 h-5" }: { className?: string }) {
   return (
     <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" className={className} aria-hidden="true">

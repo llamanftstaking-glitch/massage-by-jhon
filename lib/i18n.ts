@@ -11,6 +11,7 @@ export const dict: Dict = {
   "nav.services": { es: "Servicios", en: "Services" },
   "nav.homeService": { es: "A Domicilio", en: "Home Service" },
   "nav.about": { es: "Sobre Jhon", en: "About Jhon" },
+  "nav.credentials": { es: "Credenciales", en: "Credentials" },
   "nav.book": { es: "Reservar", en: "Book Now" },
 
   // Hero
@@ -54,6 +55,11 @@ export const dict: Dict = {
     es: "Técnica firme y constante que ayuda a moldear y activar la circulación.",
     en: "Firm, consistent technique that helps sculpt and boost circulation.",
   },
+  "svc.madero.name": { es: "Maderoterapia", en: "Wood Therapy" },
+  "svc.madero.desc": {
+    es: "Herramientas de madera profesionales para tonificar, drenar y moldear el cuerpo.",
+    en: "Professional wood tools to tone, drain and sculpt the body.",
+  },
   "svc.train.name": { es: "Entrenamiento Personal", en: "Personal Training" },
   "svc.train.desc": {
     es: "Jhon también es entrenador personal. Pregunta por planes de entrenamiento.",
@@ -87,6 +93,19 @@ export const dict: Dict = {
     es: "Sirviendo Washington Heights y toda la ciudad de Nueva York",
     en: "Serving Washington Heights and all of New York City",
   },
+
+  // Credentials
+  "cred.kicker": { es: "Credenciales", en: "Credentials" },
+  "cred.title": { es: "Profesional con licencia", en: "Licensed professional" },
+  "cred.p1": {
+    es: "Jhon está licenciado en Estética por el Departamento de Estado de Nueva York. Formación real, herramientas profesionales y años de práctica — no es improvisación.",
+    en: "Jhon is licensed in Esthetics by the New York State Department of State. Real training, professional tools and years of practice — nothing improvised.",
+  },
+  "cred.b1": { es: "Licencia del Estado de Nueva York — Estética", en: "New York State license — Esthetics" },
+  "cred.b2": { es: "Licencia No. AEE-22-04669, vigente hasta 2026", en: "License No. AEE-22-04669, valid through 2026" },
+  "cred.b3": { es: "Camilla, sábanas limpias y aceites profesionales", en: "Table, clean sheets and professional oils" },
+  "cred.b4": { es: "Herramientas de maderoterapia certificadas", en: "Certified wood-therapy tools" },
+  "cred.caption": { es: "Licencia exhibida en cada sesión", en: "License displayed at every session" },
 
   // About
   "about.kicker": { es: "Sobre Jhon", en: "About Jhon" },
@@ -147,6 +166,10 @@ export const dict: Dict = {
     en: "Professional home-service massage, table included. New York City.",
   },
   "footer.contact": { es: "Contacto", en: "Contact" },
+  "footer.license": {
+    es: "Licenciado en Estética — Depto. de Estado de NY, Lic. AEE-22-04669",
+    en: "Licensed in Esthetics — NY Dept. of State, Lic. AEE-22-04669",
+  },
   "footer.rights": { es: "Todos los derechos reservados.", en: "All rights reserved." },
   "float.label": { es: "Reservar por WhatsApp", en: "Book on WhatsApp" },
 };
