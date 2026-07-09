@@ -15,13 +15,13 @@ const manrope = Manrope({
 });
 
 export const metadata: Metadata = {
-  title: "Massage by Jhon — Masaje profesional a domicilio en NYC",
+  title: "Massage by Jhon — Masaje profesional a domicilio en NYC, 24/7",
   description:
-    "Masaje terapéutico, deportivo, reductivo y de relajación a domicilio en Nueva York. Camilla profesional incluida. Reserva por WhatsApp. | Professional home-service massage in NYC, table included.",
+    "Masaje terapéutico, deportivo, reductivo, drenaje y relajación a domicilio en Nueva York. Disponible 24/7, $100 la hora, camilla profesional incluida. Más de 15 años de experiencia. Reserva por WhatsApp. | Professional home-service massage in NYC, 24/7, table included.",
   openGraph: {
-    title: "Massage by Jhon — Masaje a domicilio en NYC",
+    title: "Massage by Jhon — Masaje a domicilio en NYC, 24/7",
     description:
-      "Masaje profesional a domicilio con camilla incluida. Reserva por WhatsApp.",
+      "Masaje profesional a domicilio con camilla incluida. Disponible 24/7 — $100 la hora. Reserva por WhatsApp.",
     type: "website",
   },
 };

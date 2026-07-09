@@ -9,6 +9,7 @@ type Dict = Record<string, { es: string; en: string }>;
 export const dict: Dict = {
   // Nav
   "nav.services": { es: "Servicios", en: "Services" },
+  "nav.pricing": { es: "Precios", en: "Pricing" },
   "nav.homeService": { es: "A Domicilio", en: "Home Service" },
   "nav.about": { es: "Sobre Jhon", en: "About Jhon" },
   "nav.credentials": { es: "Credenciales", en: "Credentials" },
@@ -19,14 +20,16 @@ export const dict: Dict = {
   "hero.title1": { es: "Relájate.", en: "Relax." },
   "hero.title2": { es: "Jhon lleva la camilla.", en: "Jhon brings the table." },
   "hero.sub": {
-    es: "Masaje terapéutico, deportivo, reductivo y de relajación en la comodidad de tu casa. Camilla profesional incluida. Reserva por WhatsApp en menos de un minuto.",
-    en: "Therapeutic, sports, reductive and relaxation massage in the comfort of your home. Professional table included. Book on WhatsApp in under a minute.",
+    es: "Masaje terapéutico, deportivo, reductivo, drenaje y relajación en la comodidad de tu casa. Disponible 24/7, camilla profesional incluida. Reserva por WhatsApp en menos de un minuto.",
+    en: "Therapeutic, sports, reductive, drainage and relaxation massage in the comfort of your home. Available 24/7, professional table included. Book on WhatsApp in under a minute.",
   },
   "hero.cta": { es: "Reservar por WhatsApp", en: "Book on WhatsApp" },
   "hero.cta2": { es: "Ver servicios", en: "See services" },
   "hero.badge1": { es: "Camilla incluida", en: "Table included" },
   "hero.badge2": { es: "Servicio a domicilio", en: "Home service" },
   "hero.badge3": { es: "Español / English", en: "English / Español" },
+  "hero.badge4": { es: "Disponible 24/7", en: "Available 24/7" },
+  "hero.badge5": { es: "$100 la hora", en: "$100 per hour" },
 
   // Services
   "services.kicker": { es: "Servicios", en: "Services" },
@@ -55,6 +58,11 @@ export const dict: Dict = {
     es: "Técnica firme y constante que ayuda a moldear y activar la circulación.",
     en: "Firm, consistent technique that helps sculpt and boost circulation.",
   },
+  "svc.drain.name": { es: "Drenaje Linfático", en: "Lymphatic Drainage" },
+  "svc.drain.desc": {
+    es: "Masaje suave que ayuda a eliminar líquidos y desinflamar. En sesiones sueltas o paquetes de 10, 15 o 20.",
+    en: "Gentle massage that helps release fluids and reduce swelling. Single sessions or packages of 10, 15 or 20.",
+  },
   "svc.madero.name": { es: "Maderoterapia", en: "Wood Therapy" },
   "svc.madero.desc": {
     es: "Herramientas de madera profesionales para tonificar, drenar y moldear el cuerpo.",
@@ -66,6 +74,37 @@ export const dict: Dict = {
     en: "Jhon is also a personal trainer. Ask about training plans.",
   },
   "svc.book": { es: "Reservar este servicio", en: "Book this service" },
+
+  // Pricing
+  "price.kicker": { es: "Precios", en: "Pricing" },
+  "price.title": { es: "Un precio claro, sin sorpresas", en: "One clear price, no surprises" },
+  "price.sub": {
+    es: "Trabajo 24/7. Una hora completa de masaje, al mismo precio en cualquier lugar.",
+    en: "Working 24/7. A full hour of massage, at the same price wherever you are.",
+  },
+  "price.per": { es: "por sesión de una hora", en: "per one-hour session" },
+  "price.always": { es: "Disponible 24/7 — todos los días", en: "Available 24/7 — every day" },
+  "price.b1": {
+    es: "Mismo precio sin importar el lugar — a domicilio en toda la ciudad",
+    en: "Same price no matter the location — home service across the city",
+  },
+  "price.b2": {
+    es: "Todo tipo de masaje y terapias: relajación, reductores, drenaje y más",
+    en: "Every type of massage and therapy: relaxation, reductive, drainage and more",
+  },
+  "price.b3": {
+    es: "Paquetes de 10, 15 o 20 sesiones para tratamientos completos",
+    en: "Packages of 10, 15 or 20 sessions for full treatments",
+  },
+  "price.b4": {
+    es: "Dedicación, respeto y seriedad en cada servicio",
+    en: "Dedication, respect and professionalism in every service",
+  },
+  "price.note": {
+    es: "Las propinas nunca son obligatorias — pero siempre se agradecen.",
+    en: "Tips are never required — but always appreciated.",
+  },
+  "price.cta": { es: "Reservar mi hora", en: "Book my session" },
 
   // Home service
   "home.kicker": { es: "Servicio a domicilio", en: "Home service" },
@@ -93,14 +132,19 @@ export const dict: Dict = {
     es: "Sirviendo Washington Heights y toda la ciudad de Nueva York",
     en: "Serving Washington Heights and all of New York City",
   },
+  "home.price": {
+    es: "Mismo precio a cualquier lugar — $100 la hora",
+    en: "Same price anywhere — $100 per hour",
+  },
 
   // Credentials
   "cred.kicker": { es: "Credenciales", en: "Credentials" },
   "cred.title": { es: "Profesional con licencia", en: "Licensed professional" },
   "cred.p1": {
-    es: "Jhon está licenciado en Estética por el Departamento de Estado de Nueva York. Formación real, herramientas profesionales y años de práctica — no es improvisación.",
-    en: "Jhon is licensed in Esthetics by the New York State Department of State. Real training, professional tools and years of practice — nothing improvised.",
+    es: "Jhon está licenciado en Estética por el Departamento de Estado de Nueva York. Formación real, herramientas profesionales y más de 15 años de práctica — no es improvisación.",
+    en: "Jhon is licensed in Esthetics by the New York State Department of State. Real training, professional tools and more than 15 years of practice — nothing improvised.",
   },
+  "cred.b0": { es: "Más de 15 años en el servicio", en: "More than 15 years in the service" },
   "cred.b1": { es: "Licencia del Estado de Nueva York — Estética", en: "New York State license — Esthetics" },
   "cred.b2": { es: "Licencia No. AEE-22-04669, vigente hasta 2026", en: "License No. AEE-22-04669, valid through 2026" },
   "cred.b3": { es: "Camilla, sábanas limpias y aceites profesionales", en: "Table, clean sheets and professional oils" },
@@ -111,8 +155,8 @@ export const dict: Dict = {
   "about.kicker": { es: "Sobre Jhon", en: "About Jhon" },
   "about.title": { es: "Manos con experiencia", en: "Experienced hands" },
   "about.p1": {
-    es: "Jhon Rivas Aiken es masajista y entrenador personal en Nueva York. Años de experiencia llevando masaje profesional a domicilio — cada sesión con camilla, técnica y respeto.",
-    en: "Jhon Rivas Aiken is a massage therapist and personal trainer in New York. Years of experience bringing professional massage to your home — every session with a proper table, technique and respect.",
+    es: "Jhon Rivas Aiken es masajista y entrenador personal en Nueva York, con más de 15 años en el servicio. Cada sesión llega con camilla, técnica, dedicación, respeto y seriedad — a la hora que lo necesites, 24/7.",
+    en: "Jhon Rivas Aiken is a massage therapist and personal trainer in New York with more than 15 years in the service. Every session comes with a proper table, technique, dedication, respect and professionalism — whenever you need it, 24/7.",
   },
   "about.q": {
     es: "“Mi meta es simple: que te levantes de la camilla sintiéndote nuevo.”",
@@ -136,6 +180,7 @@ export const dict: Dict = {
   "wiz.morning": { es: "Mañana (9am – 12pm)", en: "Morning (9am – 12pm)" },
   "wiz.afternoon": { es: "Tarde (12pm – 5pm)", en: "Afternoon (12pm – 5pm)" },
   "wiz.evening": { es: "Noche (5pm – 9pm)", en: "Evening (5pm – 9pm)" },
+  "wiz.late": { es: "Otra hora — disponible 24/7", en: "Other time — available 24/7" },
   "wiz.q3": { es: "Últimos detalles", en: "Last details" },
   "wiz.name": { es: "Tu nombre", en: "Your name" },
   "wiz.namePh": { es: "Ej: María", en: "E.g.: Maria" },
@@ -162,8 +207,8 @@ export const dict: Dict = {
 
   // Footer
   "footer.tagline": {
-    es: "Masaje profesional a domicilio con camilla incluida. Nueva York.",
-    en: "Professional home-service massage, table included. New York City.",
+    es: "Masaje profesional a domicilio con camilla incluida. Disponible 24/7 en Nueva York — $100 la hora.",
+    en: "Professional home-service massage, table included. Available 24/7 in New York City — $100 per hour.",
   },
   "footer.contact": { es: "Contacto", en: "Contact" },
   "footer.license": {
