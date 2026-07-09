@@ -1,4 +1,4 @@
-:HL["/massage-by-jhon/_next/static/chunks/0o3nkv5tvhssd.css","style"]
-:HL["/massage-by-jhon/_next/static/media/03bda585a99c6450-s.p.32sris142tqlb.woff2","font",{"crossOrigin":"","type":"font/woff2"}]
-:HL["/massage-by-jhon/_next/static/media/a343f882a40d2cc9-s.p.1sj6eobyi31rd.woff2","font",{"crossOrigin":"","type":"font/woff2"}]
-0:{"tree":{"name":"","param":null,"prefetchHints":16,"slots":{"children":{"name":"__PAGE__","param":null,"prefetchHints":0,"slots":null}}},"staleTime":300,"buildId":"i6PyhFcls2DuFBp02XpSi"}
+:HL["/massage-by-jhon/_next/static/chunks/175ecqnvabowx.css","style"]
+:HL["/massage-by-jhon/_next/static/media/2a65768255d6b625-s.p.3u4lli0-axodc.woff2","font",{"crossOrigin":"","type":"font/woff2"}]
+:HL["/massage-by-jhon/_next/static/media/fba5a26ea33df6a3-s.p.18rizl4rsrl42.woff2","font",{"crossOrigin":"","type":"font/woff2"}]
+0:{"tree":{"name":"","param":null,"prefetchHints":16,"slots":{"children":{"name":"__PAGE__","param":null,"prefetchHints":0,"slots":null}}},"staleTime":300,"buildId":"-INbqRfntARdRXBHlsfJW"}
