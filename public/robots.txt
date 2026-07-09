@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://llamanftstaking-glitch.github.io/massage-by-jhon/sitemap.xml

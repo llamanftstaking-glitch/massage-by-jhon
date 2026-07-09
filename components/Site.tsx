@@ -357,7 +357,7 @@ function Credentials({ T }: { T: (k: string) => string }) {
                   className="w-full h-auto object-cover"
                 />
               </div>
-              <div className="absolute -bottom-6 -right-4 sm:-right-8 w-32 sm:w-40 rounded-2xl overflow-hidden shadow-xl border-4 border-white rotate-3">
+              <div className="absolute -bottom-6 right-1 sm:-right-8 w-32 sm:w-40 rounded-2xl overflow-hidden shadow-xl border-4 border-white rotate-3">
                 <Image
                   src={`${BP}/images/wood-tools.jpg`}
                   alt="Herramientas profesionales de maderoterapia"

@@ -10,6 +10,14 @@ massage therapist and personal trainer in New York City.
   both languages when adding copy. Icons are hand-rolled SVGs in `components/Icons.tsx`.
 - Deployed on GitHub Pages under `/massage-by-jhon` — image paths must be prefixed
   with `NEXT_PUBLIC_BASE_PATH` (see the `BP` constant in `Site.tsx`).
+- Live URL: https://llamanftstaking-glitch.github.io/massage-by-jhon/ (also the
+  `SITE_URL` constant in `app/layout.tsx` — update it if a custom domain is added).
+- Deploy = build with `NEXT_PUBLIC_BASE_PATH=/massage-by-jhon pnpm build`, then
+  push `out/` contents (+ `.nojekyll`) to the `gh-pages` branch.
+- Fonts: Playfair Display (headings) + Plus Jakarta Sans (body) via next/font.
+- SEO: JSON-LD LocalBusiness schema in `layout.tsx`; `public/robots.txt` and
+  `public/sitemap.xml`. Owner runs ads; keep metadata/og-image intact.
+- Keep `html, body { overflow-x: clip }` (globals.css) — prevents mobile side-scroll.
 
 ## Business facts (source of truth)
 - WhatsApp booking number: +1 (646) 905-7287 (`WHATSAPP_NUMBER = "16469057287"` in `lib/i18n.ts`).
