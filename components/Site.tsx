@@ -47,6 +47,7 @@ export default function Site() {
       <HomeService T={T} />
       <Credentials T={T} />
       <About T={T} />
+      <Testimonials T={T} />
       <BookingWizard T={T} lang={lang} />
       <Footer T={T} />
       <FloatingWhatsApp T={T} lang={lang} />
@@ -416,6 +417,42 @@ function About({ T }: { T: (k: string) => string }) {
               @johns_aiken
             </a>
           </Reveal>
+        </div>
+      </div>
+    </section>
+  );
+}
+
+function Testimonials({ T }: { T: (k: string) => string }) {
+  const items = [
+    { q: "testi.q1", a: "testi.a1", Icon: WhatsAppIcon },
+    { q: "testi.q2", a: "testi.a2", Icon: InstagramIcon },
+  ];
+  return (
+    <section id="testimonios" className="py-16 sm:py-24 bg-white">
+      <div className="max-w-5xl mx-auto px-4 sm:px-6">
+        <Reveal className="text-center mb-12">
+          <p className="text-clay-500 font-bold text-sm tracking-widest uppercase mb-3">{T("testi.kicker")}</p>
+          <h2 className="font-display text-3xl sm:text-4xl lg:text-5xl text-ink-900 mb-4">{T("testi.title")}</h2>
+          <p className="text-ink-600 text-lg max-w-2xl mx-auto">{T("testi.sub")}</p>
+        </Reveal>
+        <div className="grid md:grid-cols-2 gap-5">
+          {items.map(({ q, a, Icon }, i) => (
+            <Reveal key={q} delay={i * 100}>
+              <figure className="h-full bg-sand-50 border border-sand-200 rounded-3xl p-7 sm:p-8 flex flex-col">
+                <span className="font-display text-5xl text-clay-500 leading-none mb-4" aria-hidden="true">
+                  “
+                </span>
+                <blockquote className="text-ink-900 text-lg leading-relaxed italic flex-1">{T(q)}</blockquote>
+                <figcaption className="mt-6 flex items-center gap-2 text-ink-600 font-semibold text-sm">
+                  <span className="inline-flex w-8 h-8 rounded-full bg-forest-800/10 text-forest-800 items-center justify-center">
+                    <Icon className="w-4 h-4" />
+                  </span>
+                  {T(a)}
+                </figcaption>
+              </figure>
+            </Reveal>
+          ))}
         </div>
       </div>
     </section>

@@ -163,6 +163,24 @@ export const dict: Dict = {
     en: "“My goal is simple: you get up from the table feeling brand new.”",
   },
 
+  // Testimonials
+  "testi.kicker": { es: "Testimonios", en: "Testimonials" },
+  "testi.title": { es: "Lo que dicen los clientes", en: "What clients say" },
+  "testi.sub": {
+    es: "Mensajes reales de clientes y amigos que recomiendan el servicio.",
+    en: "Real messages from clients and friends who recommend the service.",
+  },
+  "testi.q1": {
+    es: "Muy buen servicio, seriedad y respeto en sus masajes. 🙌",
+    en: "Very good service — professionalism and respect in his massages. 🙌",
+  },
+  "testi.a1": { es: "Clienta — por WhatsApp", en: "Client — via WhatsApp" },
+  "testi.q2": {
+    es: "Si buscas un excelente masajista, te recomiendo a mi amigo. Ofrece masajes terapéuticos, relajantes y deportivos con un servicio profesional, personalizado y enfocado en tu bienestar. No importa si necesitas aliviar dolores, reducir el estrés o recuperarte físicamente; estarás en muy buenas manos.",
+    en: "If you're looking for an excellent massage therapist, I recommend my friend. He offers therapeutic, relaxing and sports massages with a professional, personalized service focused on your well-being. Whether you need to relieve pain, reduce stress or recover physically — you'll be in very good hands.",
+  },
+  "testi.a2": { es: "Recomendación — en Instagram", en: "Recommendation — on Instagram" },
+
   // Wizard
   "wiz.kicker": { es: "Reserva fácil", en: "Easy booking" },
   "wiz.title": { es: "Reserva tu sesión", en: "Book your session" },
