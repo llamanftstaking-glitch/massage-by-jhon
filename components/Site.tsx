@@ -397,7 +397,12 @@ function About({ T }: { T: (k: string) => string }) {
         <div className="grid md:grid-cols-5 gap-10 items-center">
           <Reveal className="md:col-span-2">
             <div className="relative rounded-3xl overflow-hidden shadow-xl aspect-square max-w-sm mx-auto">
-              <Image src={`${BP}/images/face-massage.jpg`} alt="Jhon Rivas Aiken dando un masaje facial" fill className="object-cover" />
+              <Image
+                src={`${BP}/images/jhon-portrait.jpg`}
+                alt="Jhon Rivas Aiken sonriendo frente al mar"
+                fill
+                className="object-cover object-[45%_30%]"
+              />
             </div>
           </Reveal>
           <Reveal delay={120} className="md:col-span-3">
@@ -418,6 +423,20 @@ function About({ T }: { T: (k: string) => string }) {
             </a>
           </Reveal>
         </div>
+        <Reveal delay={200}>
+          <div className="mt-10 grid grid-cols-2 sm:grid-cols-4 gap-3">
+            {[
+              { src: "jhon-smile.jpg", alt: "Jhon Rivas Aiken sonriendo" },
+              { src: "jhon-arrival.jpg", alt: "Jhon llegando a un servicio a domicilio con su equipo" },
+              { src: "jhon-palms.jpg", alt: "Jhon Rivas Aiken al aire libre entre palmeras" },
+              { src: "face-massage.jpg", alt: "Jhon Rivas Aiken dando un masaje facial" },
+            ].map(({ src, alt }) => (
+              <div key={src} className="relative rounded-2xl overflow-hidden aspect-square shadow-md">
+                <Image src={`${BP}/images/${src}`} alt={alt} fill className="object-cover" sizes="(min-width: 640px) 25vw, 50vw" />
+              </div>
+            ))}
+          </div>
+        </Reveal>
       </div>
     </section>
   );
