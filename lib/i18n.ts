@@ -9,7 +9,6 @@ type Dict = Record<string, { es: string; en: string }>;
 export const dict: Dict = {
   // Nav
   "nav.services": { es: "Servicios", en: "Services" },
-  "nav.pricing": { es: "Precios", en: "Pricing" },
   "nav.homeService": { es: "A Domicilio", en: "Home Service" },
   "nav.about": { es: "Sobre Jhon", en: "About Jhon" },
   "nav.credentials": { es: "Credenciales", en: "Credentials" },
@@ -29,7 +28,6 @@ export const dict: Dict = {
   "hero.badge2": { es: "Servicio a domicilio", en: "Home service" },
   "hero.badge3": { es: "Español / English", en: "English / Español" },
   "hero.badge4": { es: "Disponible 24/7", en: "Available 24/7" },
-  "hero.badge5": { es: "$100 la hora", en: "$100 per hour" },
 
   // Services
   "services.kicker": { es: "Servicios", en: "Services" },
@@ -75,37 +73,6 @@ export const dict: Dict = {
   },
   "svc.book": { es: "Reservar este servicio", en: "Book this service" },
 
-  // Pricing
-  "price.kicker": { es: "Precios", en: "Pricing" },
-  "price.title": { es: "Un precio claro, sin sorpresas", en: "One clear price, no surprises" },
-  "price.sub": {
-    es: "Trabajo 24/7. Una hora completa de masaje, al mismo precio en cualquier lugar.",
-    en: "Working 24/7. A full hour of massage, at the same price wherever you are.",
-  },
-  "price.per": { es: "por sesión de una hora", en: "per one-hour session" },
-  "price.always": { es: "Disponible 24/7 — todos los días", en: "Available 24/7 — every day" },
-  "price.b1": {
-    es: "Mismo precio sin importar el lugar — a domicilio en toda la ciudad",
-    en: "Same price no matter the location — home service across the city",
-  },
-  "price.b2": {
-    es: "Todo tipo de masaje y terapias: relajación, reductores, drenaje y más",
-    en: "Every type of massage and therapy: relaxation, reductive, drainage and more",
-  },
-  "price.b3": {
-    es: "Paquetes de 10, 15 o 20 sesiones para tratamientos completos",
-    en: "Packages of 10, 15 or 20 sessions for full treatments",
-  },
-  "price.b4": {
-    es: "Dedicación, respeto y seriedad en cada servicio",
-    en: "Dedication, respect and professionalism in every service",
-  },
-  "price.note": {
-    es: "Las propinas nunca son obligatorias — pero siempre se agradecen.",
-    en: "Tips are never required — but always appreciated.",
-  },
-  "price.cta": { es: "Reservar mi hora", en: "Book my session" },
-
   // Home service
   "home.kicker": { es: "Servicio a domicilio", en: "Home service" },
   "home.title": { es: "El spa llega a tu puerta", en: "The spa comes to your door" },
@@ -133,8 +100,8 @@ export const dict: Dict = {
     en: "Serving Washington Heights and all of New York City",
   },
   "home.price": {
-    es: "Mismo precio a cualquier lugar — $100 la hora",
-    en: "Same price anywhere — $100 per hour",
+    es: "Paquetes de 10, 15 o 20 sesiones disponibles",
+    en: "Packages of 10, 15 or 20 sessions available",
   },
 
   // Credentials
@@ -225,8 +192,8 @@ export const dict: Dict = {
 
   // Footer
   "footer.tagline": {
-    es: "Masaje profesional a domicilio con camilla incluida. Disponible 24/7 en Nueva York — $100 la hora.",
-    en: "Professional home-service massage, table included. Available 24/7 in New York City — $100 per hour.",
+    es: "Masaje profesional a domicilio con camilla incluida. Disponible 24/7 en Nueva York.",
+    en: "Professional home-service massage, table included. Available 24/7 in New York City.",
   },
   "footer.contact": { es: "Contacto", en: "Contact" },
   "footer.license": {

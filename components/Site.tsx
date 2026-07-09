@@ -18,7 +18,6 @@ import {
   ArrowRightIcon,
   RollerIcon,
   ShieldCheckIcon,
-  ClockIcon,
   DropletIcon,
 } from "./Icons";
 
@@ -43,7 +42,6 @@ export default function Site() {
       <Nav lang={lang} setLang={setLang} T={T} />
       <Hero T={T} />
       <Services T={T} lang={lang} />
-      <Pricing T={T} lang={lang} />
       <HomeService T={T} />
       <Credentials T={T} />
       <About T={T} />
@@ -64,7 +62,6 @@ function Nav({ lang, setLang, T }: { lang: Lang; setLang: (l: Lang) => void; T: 
         </a>
         <nav className="hidden md:flex items-center gap-7 text-sm font-medium text-ink-600">
           <a href="#servicios" className="hover:text-forest-800 transition-colors">{T("nav.services")}</a>
-          <a href="#precios" className="hover:text-forest-800 transition-colors">{T("nav.pricing")}</a>
           <a href="#domicilio" className="hover:text-forest-800 transition-colors">{T("nav.homeService")}</a>
           <a href="#credenciales" className="hover:text-forest-800 transition-colors">{T("nav.credentials")}</a>
           <a href="#jhon" className="hover:text-forest-800 transition-colors">{T("nav.about")}</a>
@@ -131,7 +128,7 @@ function Hero({ T }: { T: (k: string) => string }) {
               </a>
             </div>
             <div className="animate-fade-up delay-300 flex flex-wrap gap-2">
-              {["hero.badge4", "hero.badge5", "hero.badge1", "hero.badge2", "hero.badge3"].map((b) => (
+              {["hero.badge4", "hero.badge1", "hero.badge2", "hero.badge3"].map((b) => (
                 <span
                   key={b}
                   className="inline-flex items-center gap-1.5 bg-white border border-sand-200 rounded-full px-3.5 py-1.5 text-sm font-medium text-ink-600"
@@ -220,57 +217,6 @@ function Services({ T, lang }: { T: (k: string) => string; lang: Lang }) {
             </a>
           </Reveal>
         </div>
-      </div>
-    </section>
-  );
-}
-
-function Pricing({ T, lang }: { T: (k: string) => string; lang: Lang }) {
-  const bullets = ["price.b1", "price.b2", "price.b3", "price.b4"];
-  return (
-    <section id="precios" className="py-16 sm:py-24 bg-sand-100">
-      <div className="max-w-5xl mx-auto px-4 sm:px-6">
-        <Reveal className="text-center mb-12">
-          <p className="text-clay-500 font-bold text-sm tracking-widest uppercase mb-3">{T("price.kicker")}</p>
-          <h2 className="font-display text-3xl sm:text-4xl lg:text-5xl text-ink-900 mb-4">{T("price.title")}</h2>
-          <p className="text-ink-600 text-lg max-w-2xl mx-auto">{T("price.sub")}</p>
-        </Reveal>
-        <Reveal delay={120}>
-          <div className="bg-white border border-sand-200 rounded-3xl shadow-xl shadow-forest-900/5 overflow-hidden">
-            <div className="grid md:grid-cols-5">
-              <div className="md:col-span-2 bg-forest-800 text-white p-8 sm:p-10 flex flex-col items-center justify-center text-center">
-                <span className="inline-flex items-center gap-2 bg-white/10 border border-white/20 rounded-full px-4 py-1.5 text-sm font-semibold mb-6">
-                  <ClockIcon className="w-4 h-4 text-clay-500" />
-                  {T("price.always")}
-                </span>
-                <p className="font-display text-6xl sm:text-7xl leading-none mb-2">$100</p>
-                <p className="text-white/70 font-medium mb-8">{T("price.per")}</p>
-                <a
-                  href={buildWaLink(t("wa.greeting", lang))}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="inline-flex items-center gap-2 bg-[#25D366] hover:bg-[#1fb355] text-white font-bold rounded-full px-6 py-3 transition-all hover:scale-[1.02] shadow-lg shadow-[#25D366]/30"
-                >
-                  <WhatsAppIcon className="w-5 h-5" />
-                  {T("price.cta")}
-                </a>
-              </div>
-              <div className="md:col-span-3 p-8 sm:p-10">
-                <ul className="space-y-5">
-                  {bullets.map((b) => (
-                    <li key={b} className="flex items-start gap-3">
-                      <span className="shrink-0 mt-0.5 w-7 h-7 rounded-full bg-forest-800/10 text-forest-800 flex items-center justify-center">
-                        <CheckIcon className="w-4 h-4" />
-                      </span>
-                      <span className="text-ink-900 font-medium leading-relaxed">{T(b)}</span>
-                    </li>
-                  ))}
-                </ul>
-                <p className="mt-7 text-ink-600 text-sm italic">{T("price.note")}</p>
-              </div>
-            </div>
-          </div>
-        </Reveal>
       </div>
     </section>
   );
