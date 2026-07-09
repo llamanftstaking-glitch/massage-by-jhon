@@ -23,15 +23,16 @@ massage therapist and personal trainer in New York City.
 - WhatsApp booking number: +1 (646) 905-7287 (`WHATSAPP_NUMBER = "16469057287"` in `lib/i18n.ts`).
   All CTAs open a DIRECT wa.me chat — there is no WhatsApp group.
 - Instagram: @johns_aiken.
-- Price: $100 per one-hour session, same price at any location, 24/7 availability.
-- Packages of 10, 15 or 20 sessions (drainage/reductive treatments).
+- Pricing is NOT shown on the site (owner's decision 2026-07: Jhon quotes each
+  client individually over WhatsApp). Do not re-add prices without asking.
+- 24/7 availability. Packages of 10, 15 or 20 sessions (drainage/reductive treatments).
 - 15+ years in the service. Values: dedication, respect, seriousness.
 - Licensed in Esthetics, NY Dept. of State, Lic. AEE-22-04669 (through 2026).
 - Serves Washington Heights and all of NYC, home service with table included.
 - Tips are welcome, never required.
 
 ## Sections (in order)
-Nav → Hero → Services (7 cards incl. Lymphatic Drainage) → Pricing → Home Service
+Nav → Hero → Services (7 cards incl. Lymphatic Drainage) → Home Service
 → Credentials → About (portrait + 4-photo gallery) → Testimonials → Booking wizard
 (3 steps → prefilled WhatsApp message) → Footer → floating WhatsApp button.
 

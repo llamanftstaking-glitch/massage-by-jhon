@@ -18,7 +18,7 @@ const SITE_URL = "https://llamanftstaking-glitch.github.io/massage-by-jhon";
 const OG_IMAGE = `${SITE_URL}/images/og-cover.jpg`;
 const TITLE = "Massage by Jhon — Masaje profesional a domicilio en NYC, 24/7";
 const DESCRIPTION =
-  "Masaje terapéutico, deportivo, reductivo, drenaje linfático y relajación a domicilio en Nueva York. Disponible 24/7, $100 la hora, camilla profesional incluida. Más de 15 años de experiencia. Reserva por WhatsApp.";
+  "Masaje terapéutico, deportivo, reductivo, drenaje linfático y relajación a domicilio en Nueva York. Disponible 24/7, camilla profesional incluida. Más de 15 años de experiencia. Reserva por WhatsApp.";
 
 export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),
@@ -62,7 +62,6 @@ const jsonLd = {
   url: SITE_URL,
   telephone: "+16469057287",
   image: OG_IMAGE,
-  priceRange: "$100 por sesión de una hora",
   founder: { "@type": "Person", name: "Jhon Rivas Aiken", jobTitle: "Massage Therapist & Personal Trainer" },
   address: { "@type": "PostalAddress", addressLocality: "New York", addressRegion: "NY", addressCountry: "US" },
   areaServed: [
@@ -87,8 +86,6 @@ const jsonLd = {
   ].map((name) => ({
     "@type": "Offer",
     itemOffered: { "@type": "Service", name },
-    price: "100",
-    priceCurrency: "USD",
   })),
 };
 
