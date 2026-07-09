@@ -94,6 +94,22 @@ export function ShieldCheckIcon({ className = "w-6 h-6" }: { className?: string 
   );
 }
 
+export function ClockIcon({ className = "w-6 h-6" }: { className?: string }) {
+  return (
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" className={className} aria-hidden="true">
+      <path strokeLinecap="round" strokeLinejoin="round" d="M12 7v5l3 2m6-2a9 9 0 11-18 0 9 9 0 0118 0z" />
+    </svg>
+  );
+}
+
+export function DropletIcon({ className = "w-6 h-6" }: { className?: string }) {
+  return (
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" className={className} aria-hidden="true">
+      <path strokeLinecap="round" strokeLinejoin="round" d="M12 3s6.5 6.5 6.5 11a6.5 6.5 0 11-13 0C5.5 9.5 12 3 12 3zm-2.5 11.5a2.5 2.5 0 002.5 2.5" />
+    </svg>
+  );
+}
+
 export function ArrowRightIcon({ className = "w-5 h-5" }: { className?: string }) {
   return (
     <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" className={className} aria-hidden="true">
