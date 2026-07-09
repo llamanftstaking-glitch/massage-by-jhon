@@ -2,4 +2,4 @@
 2:I[55587,["/massage-by-jhon/_next/static/chunks/1ra62b4l6e5le.js","/massage-by-jhon/_next/static/chunks/0175z2_yvkr01.js"],"default"]
 3:I[58256,["/massage-by-jhon/_next/static/chunks/1ra62b4l6e5le.js","/massage-by-jhon/_next/static/chunks/0175z2_yvkr01.js"],"default"]
 4:[]
-0:{"rsc":["$","$1","c",{"children":[null,["$","$L2",null,{"parallelRouterKey":"children","template":["$","$L3",null,{}]}]]}],"isPartial":false,"staleTime":300,"varyParams":"$W4","buildId":"-INbqRfntARdRXBHlsfJW"}
+0:{"rsc":["$","$1","c",{"children":[null,["$","$L2",null,{"parallelRouterKey":"children","template":["$","$L3",null,{}]}]]}],"isPartial":false,"staleTime":300,"varyParams":"$W4","buildId":"eUYM780iEWDtGZpE3NX2M"}
