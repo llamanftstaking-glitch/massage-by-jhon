@@ -22,7 +22,11 @@ massage therapist and personal trainer in New York City.
 ## Business facts (source of truth)
 - WhatsApp booking number: +1 (646) 905-7287 (`WHATSAPP_NUMBER = "16469057287"` in `lib/i18n.ts`).
   All CTAs open a DIRECT wa.me chat — there is no WhatsApp group.
-- Instagram: @johns_aiken.
+- Instagram: @johns_aiken (`INSTAGRAM` / `INSTAGRAM_HANDLE` in `lib/i18n.ts`).
+  A new IG account may replace it later — change those two constants only.
+- Referral program (decision 2026-07): refer 2 friends who complete a paid massage
+  → client gets a free 30-minute massage. Lives in the `#referidos` section; the
+  "Share with a friend" button uses a wa.me contact-picker link (`buildWaShareLink`).
 - Pricing is NOT shown on the site (owner's decision 2026-07: Jhon quotes each
   client individually over WhatsApp). Do not re-add prices without asking.
 - 24/7 availability. Packages of 10, 15 or 20 sessions (drainage/reductive treatments).
@@ -33,8 +37,9 @@ massage therapist and personal trainer in New York City.
 
 ## Sections (in order)
 Nav → Hero → Services (7 cards incl. Lymphatic Drainage) → Home Service
-→ Credentials → About (portrait + 4-photo gallery) → Testimonials → Booking wizard
-(3 steps → prefilled WhatsApp message) → Footer → floating WhatsApp button.
+→ Credentials → About (portrait + 4-photo gallery) → Testimonials → Referrals
+(`#referidos`) → Booking wizard (3 steps → prefilled WhatsApp message) → Footer
+→ floating WhatsApp button.
 
 ## Decisions / conventions
 - Client testimonials are published as TEXT ONLY — never publish clients'

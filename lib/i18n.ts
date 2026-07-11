@@ -3,6 +3,8 @@ export type Lang = "es" | "en";
 export const WHATSAPP_NUMBER = "16469057287";
 export const PHONE_DISPLAY = "646-905-7287";
 export const INSTAGRAM = "https://www.instagram.com/johns_aiken";
+export const INSTAGRAM_HANDLE = "@johns_aiken";
+export const SITE_URL = "https://llamanftstaking-glitch.github.io/massage-by-jhon";
 
 type Dict = Record<string, { es: string; en: string }>;
 
@@ -12,7 +14,9 @@ export const dict: Dict = {
   "nav.homeService": { es: "A Domicilio", en: "Home Service" },
   "nav.about": { es: "Sobre Jhon", en: "About Jhon" },
   "nav.credentials": { es: "Credenciales", en: "Credentials" },
+  "nav.referrals": { es: "Referidos", en: "Referrals" },
   "nav.book": { es: "Reservar", en: "Book Now" },
+  "nav.instagram": { es: "Síguenos en Instagram", en: "Follow us on Instagram" },
 
   // Hero
   "hero.kicker": { es: "Masaje profesional a domicilio en NYC", en: "Professional home-service massage in NYC" },
@@ -148,6 +152,42 @@ export const dict: Dict = {
   },
   "testi.a2": { es: "Recomendación — en Instagram", en: "Recommendation — on Instagram" },
 
+  // Referrals
+  "ref.kicker": { es: "Programa de referidos", en: "Referral program" },
+  "ref.title": {
+    es: "Refiere a 2 amigos y tu masaje va por la casa",
+    en: "Refer 2 friends and your massage is on the house",
+  },
+  "ref.sub": {
+    es: "Recomienda a Jhon a 2 personas. Cuando ambas reserven y reciban su masaje, tú te ganas un masaje de 30 minutos totalmente gratis.",
+    en: "Recommend Jhon to 2 people. When both book and get their massage, you earn a full 30-minute massage — completely free.",
+  },
+  "ref.badge": { es: "30 min GRATIS", en: "30 min FREE" },
+  "ref.s1.t": { es: "Comparte", en: "Share" },
+  "ref.s1.d": {
+    es: "Envía la info de Jhon a 2 amigos por WhatsApp con un solo toque.",
+    en: "Send Jhon's info to 2 friends on WhatsApp with a single tap.",
+  },
+  "ref.s2.t": { es: "Ellos reservan", en: "They book" },
+  "ref.s2.d": {
+    es: "Tus 2 amigos reservan y reciben su masaje. Que mencionen tu nombre al escribir.",
+    en: "Your 2 friends book and get their massage. Have them mention your name when they message.",
+  },
+  "ref.s3.t": { es: "Tú ganas 30 min gratis", en: "You get 30 min free" },
+  "ref.s3.d": {
+    es: "Recibes un masaje de cortesía de 30 minutos en tu próxima sesión.",
+    en: "You get a complimentary 30-minute massage on your next session.",
+  },
+  "ref.cta": { es: "Compartir con un amigo", en: "Share with a friend" },
+  "ref.note": {
+    es: "Válido cuando tus referidos completen su primer masaje. Sin límite: mientras más refieras, más ganas.",
+    en: "Valid once your referrals complete their first massage. No limit — the more you refer, the more you earn.",
+  },
+  "wa.refer": {
+    es: "¡Hola! 💆 Te recomiendo a Jhon, masajista profesional a domicilio en Nueva York — disponible 24/7 y lleva su propia camilla. Reserva por WhatsApp: https://wa.me/16469057287 o mira su web: https://llamanftstaking-glitch.github.io/massage-by-jhon",
+    en: "Hi! 💆 I recommend Jhon, a professional home-service massage therapist in New York — available 24/7 and he brings his own table. Book on WhatsApp: https://wa.me/16469057287 or check his site: https://llamanftstaking-glitch.github.io/massage-by-jhon",
+  },
+
   // Wizard
   "wiz.kicker": { es: "Reserva fácil", en: "Easy booking" },
   "wiz.title": { es: "Reserva tu sesión", en: "Book your session" },
@@ -210,4 +250,9 @@ export function t(key: string, lang: Lang): string {
 
 export function buildWaLink(message: string): string {
   return `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(message)}`;
+}
+
+// Opens WhatsApp's contact picker so a client can forward the message to a friend.
+export function buildWaShareLink(message: string): string {
+  return `https://wa.me/?text=${encodeURIComponent(message)}`;
 }
