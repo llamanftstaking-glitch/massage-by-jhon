@@ -8,11 +8,11 @@ massage therapist and personal trainer in New York City.
 - Single page: `app/page.tsx` renders `components/Site.tsx` (all sections live there).
 - ALL user-facing text lives in `lib/i18n.ts` as `{ es, en }` pairs — always add
   both languages when adding copy. Icons are hand-rolled SVGs in `components/Icons.tsx`.
-- Deployed on GitHub Pages at the apex custom domain `johnmassages.nyc` (served
-  from the repo root, so base path is EMPTY). `public/CNAME` holds `johnmassages.nyc`.
+- Deployed on GitHub Pages at the apex custom domain `johnmassage.com` (served
+  from the repo root, so base path is EMPTY). `public/CNAME` holds `johnmassage.com`.
   Image paths still go through the `BP` constant in `Site.tsx` (`NEXT_PUBLIC_BASE_PATH`),
   which is empty in production — do NOT set it when building for the custom domain.
-- Live URL: https://johnmassages.nyc/ (also the `SITE_URL` constant in
+- Live URL: https://johnmassage.com/ (also the `SITE_URL` constant in
   `app/layout.tsx` and `lib/i18n.ts` — update both if the domain changes again).
 - Deploy = build with `node node_modules/next/dist/bin/next build` (NO
   `NEXT_PUBLIC_BASE_PATH` — empty base path = root), then push `out/` contents

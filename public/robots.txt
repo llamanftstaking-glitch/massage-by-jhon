@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://johnmassages.nyc/sitemap.xml
+Sitemap: https://johnmassage.com/sitemap.xml
