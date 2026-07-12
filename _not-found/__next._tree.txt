@@ -1,2 +1,2 @@
-:HL["/massage-by-jhon/_next/static/chunks/0v3gputj5m_qn.css","style"]
-0:{"tree":{"name":"","param":null,"prefetchHints":16,"slots":{"children":{"name":"/_not-found","param":null,"prefetchHints":0,"slots":{"children":{"name":"__PAGE__","param":null,"prefetchHints":0,"slots":null}}}}},"staleTime":300,"buildId":"FxKTxusbWQJVA_CDq0IrC"}
+:HL["/_next/static/chunks/0v3gputj5m_qn.css","style"]
+0:{"tree":{"name":"","param":null,"prefetchHints":16,"slots":{"children":{"name":"/_not-found","param":null,"prefetchHints":0,"slots":{"children":{"name":"__PAGE__","param":null,"prefetchHints":0,"slots":null}}}}},"staleTime":300,"buildId":"wGN53HPryLJ-_i-pCXYql"}
