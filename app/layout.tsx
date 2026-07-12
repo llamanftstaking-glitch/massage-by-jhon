@@ -14,7 +14,7 @@ const jakarta = Plus_Jakarta_Sans({
   weight: ["400", "500", "600", "700", "800"],
 });
 
-const SITE_URL = "https://llamanftstaking-glitch.github.io/massage-by-jhon";
+const SITE_URL = "https://johnmassages.nyc";
 const OG_IMAGE = `${SITE_URL}/images/og-cover.jpg`;
 const TITLE = "Massage by Jhon — Masaje profesional a domicilio en NYC, 24/7";
 const DESCRIPTION =

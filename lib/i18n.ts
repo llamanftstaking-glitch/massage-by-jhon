@@ -4,7 +4,7 @@ export const WHATSAPP_NUMBER = "16469057287";
 export const PHONE_DISPLAY = "646-905-7287";
 export const INSTAGRAM = "https://www.instagram.com/johns_aiken";
 export const INSTAGRAM_HANDLE = "@johns_aiken";
-export const SITE_URL = "https://llamanftstaking-glitch.github.io/massage-by-jhon";
+export const SITE_URL = "https://johnmassages.nyc";
 
 type Dict = Record<string, { es: string; en: string }>;
 
@@ -184,8 +184,8 @@ export const dict: Dict = {
     en: "Valid once your referrals complete their first massage. No limit — the more you refer, the more you earn.",
   },
   "wa.refer": {
-    es: "¡Hola! 💆 Te recomiendo a Jhon, masajista profesional a domicilio en Nueva York — disponible 24/7 y lleva su propia camilla. Reserva por WhatsApp: https://wa.me/16469057287 o mira su web: https://llamanftstaking-glitch.github.io/massage-by-jhon",
-    en: "Hi! 💆 I recommend Jhon, a professional home-service massage therapist in New York — available 24/7 and he brings his own table. Book on WhatsApp: https://wa.me/16469057287 or check his site: https://llamanftstaking-glitch.github.io/massage-by-jhon",
+    es: "¡Hola! 💆 Te recomiendo a Jhon, masajista profesional a domicilio en Nueva York — disponible 24/7 y lleva su propia camilla. Reserva por WhatsApp: https://wa.me/16469057287 o mira su web: https://johnmassages.nyc",
+    en: "Hi! 💆 I recommend Jhon, a professional home-service massage therapist in New York — available 24/7 and he brings his own table. Book on WhatsApp: https://wa.me/16469057287 or check his site: https://johnmassages.nyc",
   },
 
   // Wizard

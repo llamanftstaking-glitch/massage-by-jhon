@@ -8,12 +8,15 @@ massage therapist and personal trainer in New York City.
 - Single page: `app/page.tsx` renders `components/Site.tsx` (all sections live there).
 - ALL user-facing text lives in `lib/i18n.ts` as `{ es, en }` pairs — always add
   both languages when adding copy. Icons are hand-rolled SVGs in `components/Icons.tsx`.
-- Deployed on GitHub Pages under `/massage-by-jhon` — image paths must be prefixed
-  with `NEXT_PUBLIC_BASE_PATH` (see the `BP` constant in `Site.tsx`).
-- Live URL: https://llamanftstaking-glitch.github.io/massage-by-jhon/ (also the
-  `SITE_URL` constant in `app/layout.tsx` — update it if a custom domain is added).
-- Deploy = build with `NEXT_PUBLIC_BASE_PATH=/massage-by-jhon pnpm build`, then
-  push `out/` contents (+ `.nojekyll`) to the `gh-pages` branch.
+- Deployed on GitHub Pages at the apex custom domain `johnmassages.nyc` (served
+  from the repo root, so base path is EMPTY). `public/CNAME` holds `johnmassages.nyc`.
+  Image paths still go through the `BP` constant in `Site.tsx` (`NEXT_PUBLIC_BASE_PATH`),
+  which is empty in production — do NOT set it when building for the custom domain.
+- Live URL: https://johnmassages.nyc/ (also the `SITE_URL` constant in
+  `app/layout.tsx` and `lib/i18n.ts` — update both if the domain changes again).
+- Deploy = build with `node node_modules/next/dist/bin/next build` (NO
+  `NEXT_PUBLIC_BASE_PATH` — empty base path = root), then push `out/` contents
+  (+ `.nojekyll` + `CNAME`) to the `gh-pages` branch.
 - Fonts: Playfair Display (headings) + Plus Jakarta Sans (body) via next/font.
 - SEO: JSON-LD LocalBusiness schema in `layout.tsx`; `public/robots.txt` and
   `public/sitemap.xml`. Owner runs ads; keep metadata/og-image intact.
