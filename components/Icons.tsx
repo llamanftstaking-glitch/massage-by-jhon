@@ -110,6 +110,22 @@ export function DropletIcon({ className = "w-6 h-6" }: { className?: string }) {
   );
 }
 
+export function GiftIcon({ className = "w-6 h-6" }: { className?: string }) {
+  return (
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" className={className} aria-hidden="true">
+      <path strokeLinecap="round" strokeLinejoin="round" d="M20 12v8a1 1 0 01-1 1H5a1 1 0 01-1-1v-8M3 8h18v3a1 1 0 01-1 1H4a1 1 0 01-1-1V8zm9 0v13M12 8S9.5 3.5 7 5s1.5 3 5 3zm0 0s2.5-4.5 5-3-1.5 3-5 3z" />
+    </svg>
+  );
+}
+
+export function ShareIcon({ className = "w-6 h-6" }: { className?: string }) {
+  return (
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" className={className} aria-hidden="true">
+      <path strokeLinecap="round" strokeLinejoin="round" d="M18 8a3 3 0 100-6 3 3 0 000 6zm0 14a3 3 0 100-6 3 3 0 000 6zM6 15a3 3 0 100-6 3 3 0 000 6zm2.6-4.3l6.8-3.4m0 9.4l-6.8-3.4" />
+    </svg>
+  );
+}
+
 export function ArrowRightIcon({ className = "w-5 h-5" }: { className?: string }) {
   return (
     <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" className={className} aria-hidden="true">

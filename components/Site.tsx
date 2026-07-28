@@ -2,7 +2,7 @@
 
 import Image from "next/image";
 import { useState } from "react";
-import { t, buildWaLink, type Lang, PHONE_DISPLAY, INSTAGRAM, WHATSAPP_NUMBER } from "@/lib/i18n";
+import { t, buildWaLink, buildWaShareLink, type Lang, PHONE_DISPLAY, INSTAGRAM, INSTAGRAM_HANDLE, WHATSAPP_NUMBER } from "@/lib/i18n";
 import Reveal from "./Reveal";
 import {
   WhatsAppIcon,
@@ -19,6 +19,8 @@ import {
   RollerIcon,
   ShieldCheckIcon,
   DropletIcon,
+  GiftIcon,
+  ShareIcon,
 } from "./Icons";
 
 const BP = process.env.NEXT_PUBLIC_BASE_PATH || "";
@@ -46,6 +48,7 @@ export default function Site() {
       <Credentials T={T} />
       <About T={T} />
       <Testimonials T={T} />
+      <Referrals T={T} lang={lang} />
       <BookingWizard T={T} lang={lang} />
       <Footer T={T} />
       <FloatingWhatsApp T={T} lang={lang} />
@@ -65,8 +68,18 @@ function Nav({ lang, setLang, T }: { lang: Lang; setLang: (l: Lang) => void; T: 
           <a href="#domicilio" className="hover:text-forest-800 transition-colors">{T("nav.homeService")}</a>
           <a href="#credenciales" className="hover:text-forest-800 transition-colors">{T("nav.credentials")}</a>
           <a href="#jhon" className="hover:text-forest-800 transition-colors">{T("nav.about")}</a>
+          <a href="#referidos" className="hover:text-forest-800 transition-colors">{T("nav.referrals")}</a>
         </nav>
-        <div className="flex items-center gap-3">
+        <div className="flex items-center gap-2 sm:gap-3">
+          <a
+            href={INSTAGRAM}
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label={T("nav.instagram")}
+            className="inline-flex items-center justify-center w-9 h-9 rounded-full text-white bg-gradient-to-tr from-[#f09433] via-[#dc2743] to-[#bc1888] hover:opacity-90 transition-opacity shadow-sm"
+          >
+            <InstagramIcon className="w-4 h-4" />
+          </a>
           <button
             onClick={() => setLang(lang === "es" ? "en" : "es")}
             className="text-xs font-bold tracking-wide border border-sand-200 rounded-full px-3 py-1.5 text-ink-600 hover:border-forest-800 hover:text-forest-800 transition-colors cursor-pointer"
@@ -362,10 +375,10 @@ function About({ T }: { T: (k: string) => string }) {
               href={INSTAGRAM}
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center gap-2 text-ink-600 hover:text-forest-800 font-semibold transition-colors"
+              className="inline-flex items-center gap-2 rounded-full px-5 py-2.5 font-semibold text-white bg-gradient-to-tr from-[#f09433] via-[#dc2743] to-[#bc1888] hover:opacity-90 transition-opacity shadow-md"
             >
-              <InstagramIcon />
-              @johns_aiken
+              <InstagramIcon className="w-5 h-5" />
+              {INSTAGRAM_HANDLE}
             </a>
           </Reveal>
         </div>
@@ -419,6 +432,66 @@ function Testimonials({ T }: { T: (k: string) => string }) {
             </Reveal>
           ))}
         </div>
+      </div>
+    </section>
+  );
+}
+
+function Referrals({ T, lang }: { T: (k: string) => string; lang: Lang }) {
+  const steps = [
+    { key: "s1", Icon: ShareIcon },
+    { key: "s2", Icon: WhatsAppIcon },
+    { key: "s3", Icon: GiftIcon },
+  ] as const;
+  const shareLink = buildWaShareLink(t("wa.refer", lang));
+
+  return (
+    <section id="referidos" className="py-16 sm:py-24 bg-sand-50">
+      <div className="max-w-6xl mx-auto px-4 sm:px-6">
+        <Reveal>
+          <div className="relative overflow-hidden rounded-[2rem] bg-gradient-to-br from-forest-800 to-forest-900 px-6 py-12 sm:px-12 sm:py-16 shadow-2xl shadow-forest-900/20">
+            <div className="animate-glow absolute -top-20 -right-16 w-72 h-72 rounded-full bg-clay-500/30 blur-3xl pointer-events-none" />
+            <div className="animate-glow absolute -bottom-24 -left-12 w-72 h-72 rounded-full bg-sage-600/30 blur-3xl pointer-events-none" />
+
+            <div className="relative grid lg:grid-cols-2 gap-10 lg:gap-14 items-center">
+              <div>
+                <span className="animate-float inline-flex items-center gap-2 rounded-full bg-clay-500 text-white font-bold text-sm px-4 py-2 shadow-lg mb-5">
+                  <GiftIcon className="w-4 h-4" />
+                  {T("ref.badge")}
+                </span>
+                <p className="text-clay-500 font-bold text-sm tracking-widest uppercase mb-3">{T("ref.kicker")}</p>
+                <h2 className="font-display text-3xl sm:text-4xl lg:text-5xl text-white mb-5 leading-tight">{T("ref.title")}</h2>
+                <p className="text-white/70 text-lg leading-relaxed mb-8">{T("ref.sub")}</p>
+                <a
+                  href={shareLink}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center gap-2 bg-[#25D366] hover:bg-[#1fb355] text-white font-bold rounded-full px-7 py-3.5 text-base shadow-lg shadow-[#25D366]/30 transition-all hover:scale-[1.02]"
+                >
+                  <ShareIcon className="w-5 h-5" />
+                  {T("ref.cta")}
+                </a>
+                <p className="text-white/50 text-sm mt-4 max-w-md">{T("ref.note")}</p>
+              </div>
+
+              <div className="space-y-4">
+                {steps.map(({ key, Icon }, i) => (
+                  <Reveal key={key} delay={i * 100}>
+                    <div className="flex gap-4 bg-white/5 border border-white/10 rounded-2xl p-5">
+                      <span className="shrink-0 w-11 h-11 rounded-full bg-white/10 text-white flex items-center justify-center">
+                        <Icon className="w-5 h-5" />
+                      </span>
+                      <div>
+                        <h3 className="text-white font-bold mb-1">{T(`ref.${key}.t`)}</h3>
+                        <p className="text-white/60 text-sm leading-relaxed">{T(`ref.${key}.d`)}</p>
+                      </div>
+                    </div>
+                  </Reveal>
+                ))}
+              </div>
+            </div>
+          </div>
+        </Reveal>
       </div>
     </section>
   );
@@ -693,6 +766,7 @@ function FloatingWhatsApp({ T, lang }: { T: (k: string) => string; lang: Lang })
       aria-label={T("float.label")}
       className="fixed bottom-5 right-5 z-50 w-14 h-14 rounded-full bg-[#25D366] hover:bg-[#1fb355] text-white flex items-center justify-center shadow-xl shadow-[#25D366]/40 transition-all hover:scale-110"
     >
+      <span className="animate-pulse-ring absolute inset-0 rounded-full bg-[#25D366] -z-10" aria-hidden="true" />
       <WhatsAppIcon className="w-7 h-7" />
     </a>
   );
